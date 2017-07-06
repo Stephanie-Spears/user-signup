@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <form method="post">
+  <form action="/user-signup" method="post">
     <table>
       <tbody>
         <tr>
@@ -9,7 +9,7 @@
             <label for="username">Username</label>
           </td>
           <td>
-          <input type="text" name="username" value=""><span class="error">That's not a valid username</span>
+          <input type="text" name="username"><span class="error">That's not a valid username</span>
         </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             <label for="email">Email (optional)</label>
           </td>
           <td>
-            <input name="email" value="">
+            <input name="email" type="text">
             <span class="error"></span>
           </td>
         </tr>
@@ -43,26 +43,14 @@
     </table>
     <input type="submit">
   </form>
-    <!-- <h1>Get It Done!</h1>
-    <form method='post'>
-        <label>
-            New Task:
-            <input type="text" name='task' />
-        </label>
-        <input type="submit" value='Add Task' />
-    </form>
 
-    <hr />
-
-    {% if tasks|length == 0 %}
-    <p>No tasks yet</p>
-    {% else %}
-
-        <ul>
-            {% for task in tasks %}
-            <li>{{task}}</li>
-            {% endfor %}
-        </ul> -->
-
-    {% endif %}
+{% if error %}
+  <style type="text/css">
+      .error {
+          display: block;
+          color: red;
+        }
+  </style>
+  <!-- <p class='error' display='block'>{{ error }}</p> -->
+{% endif %}
 {% endblock %}
