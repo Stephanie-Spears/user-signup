@@ -17,7 +17,7 @@ def get_signup():
 
 
     if email:
-        if not re.match("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", email) or (2 >= len(email) or len(email) >= 20):
+        if not re.match("^[a-zA-Z0-9_+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$", email) or (2 >= len(email) or len(email) >= 20):
         # re.match("/^[a-zA-Z]{3,20}$/", email):
             error = "True"
             return redirect("/?error=" + error)
