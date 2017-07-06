@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form method="post">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <label for="username">Username</label>
+          </td>
+          <td>
+          <input type="text" name="username" value=""><span class="error">That's not a valid username</span>
+        </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password</label>
+          </td>
+          <td>
+            <input type="password" name="password">
+            <span class="error">That's not a valid password</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="verify">Verify Password</label>
+          </td>
+          <td>
+            <input type="password" name="verify">
+            <span class="error">Passwords don't match</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email (optional)</label>
+          </td>
+          <td>
+            <input name="email" value="">
+            <span class="error"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="submit">
+  </form>
+    <!-- <h1>Get It Done!</h1>
+    <form method='post'>
+        <label>
+            New Task:
+            <input type="text" name='task' />
+        </label>
+        <input type="submit" value='Add Task' />
+    </form>
+
+    <hr />
+
+    {% if tasks|length == 0 %}
+    <p>No tasks yet</p>
+    {% else %}
+
+        <ul>
+            {% for task in tasks %}
+            <li>{{task}}</li>
+            {% endfor %}
+        </ul> -->
+
+    {% endif %}
+{% endblock %}
