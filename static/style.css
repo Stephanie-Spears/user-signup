@@ -1,0 +1,30 @@
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- imports ---- */
+/*@import url(https://fonts.googleapis.com/css?family=Averia+Serif+Libre&effect=outline);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css);*/
+/* ---- base ---- */
+/**{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+
+body{
+  font-family: Averia Serif Libre, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  color: #f8f8f8;
+}*/

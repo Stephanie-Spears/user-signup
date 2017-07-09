@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <form action="/user-signup" method="post">
+  <form method="POST">
     <table>
       <tbody>
         <tr>
@@ -9,7 +9,7 @@
             <label for="username">Username</label>
           </td>
           <td>
-          <input type="text" name="username"><span class="error">That's not a valid username</span>
+          <input type="text" name="username" value="{{request.form['username']}}"><span class="error">Invalid Username</span>
         </td>
         </tr>
         <tr>
@@ -18,7 +18,7 @@
           </td>
           <td>
             <input type="password" name="password">
-            <span class="error">That's not a valid password</span>
+            <span class="error">Invalid Password</span>
           </td>
         </tr>
         <tr>
@@ -27,7 +27,7 @@
           </td>
           <td>
             <input type="password" name="verify">
-            <span class="error">Passwords don't match</span>
+            <span class="error">Passwords Do Not Match</span>
           </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             <label for="email">Email (optional)</label>
           </td>
           <td>
-            <input name="email" type="text">
+            <input name="email" type="text" value="{{request.form['email']}}">
             <span class="error"></span>
           </td>
         </tr>
