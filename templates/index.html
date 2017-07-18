@@ -9,7 +9,10 @@
             <label for="username">Username</label>
           </td>
           <td>
-          <input type="text" name="username" value="{{request.form['username']}}"><span class="error">Invalid Username</span>
+          <input type="text" name="username" value="{{request.form['username']}}">
+          {% if error == "Username error" or error == "Username and Password and Verify error" or error == "Username and Password error" %}
+          <span class="error">Invalid Username</span>
+          {% endif %}
         </td>
         </tr>
         <tr>
@@ -18,7 +21,9 @@
           </td>
           <td>
             <input type="password" name="password">
+            {% if error == "Password error" or error == "Username and Password and Verify error" or error == "Username and Password error" %}
             <span class="error">Invalid Password</span>
+            {% endif %}
           </td>
         </tr>
         <tr>
@@ -27,7 +32,9 @@
           </td>
           <td>
             <input type="password" name="verify">
+            {% if error == "Verify error" or error == "Username and Password and Verify error" %}
             <span class="error">Passwords Do Not Match</span>
+            {% endif %}
           </td>
         </tr>
         <tr>
@@ -36,7 +43,9 @@
           </td>
           <td>
             <input name="email" type="text" value="{{request.form['email']}}">
-            <span class="error"></span>
+            {% if error == "Email error" %}
+            <span class="error">Email invalid</span>
+            {% endif %}
           </td>
         </tr>
       </tbody>
